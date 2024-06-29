@@ -1,0 +1,79 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="content/styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Password Genrater</h1>
+
+			<div class="display-containter">
+				<input
+					type="text"
+					readonly
+					placeholder="Password"
+					class="display"
+					data-passwordDisplay />
+
+				<button data-copy>
+					<span data-copyMsg>Copied</span>
+					<img src="" alt="copy" height="23" width="23" />
+				</button>
+			</div>
+
+			<div class="input-container">
+				<div class="length-container">
+					<p>Password length</p>
+					<p data-lengthNum>0</p>
+				</div>
+
+				<input
+					type="range"
+					min="1"
+					max="20"
+					class="slider"
+					step="1"
+					data-lengthSlider />
+
+				<!-- checkBox -->
+
+				<div class="check">
+					<input type="checkbox" id="uppercase" />
+					<label for="uppercase">Includes Upper Case latter</label>
+				</div>
+
+				<div class="check">
+					<input type="checkbox" id="lowercase" />
+					<label for="lowercase">Includes lower Case latter</label>
+				</div>
+
+				<div class="check">
+					<input type="checkbox" id="numbers" />
+					<label for="numbers">Includes Number</label>
+				</div>
+
+				<div class="check">
+					<input type="checkbox" id="symbols" />
+					<label for="symbols">Includes Symbols</label>
+				</div>
+
+				<!-- strength section -->
+
+				<div class="strength-container">
+					<p>Strength</p>
+					<div data-indicator class="indicater"></div>
+				</div>
+
+				<!-- gentrate password -->
+				<button class="generateButton">Genrate Password</button>
+			</div>
+		</div>
+
+		<script src="content/index.js"></script>
+	</body>
+</html>
